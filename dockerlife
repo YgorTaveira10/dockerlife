@@ -1,0 +1,11 @@
+# Usar uma imagem base leve do Python
+FROM python:3.9-alpine
+
+# Copiar o arquivo Python para o container
+COPY app.py /app/app.py
+
+# Definir o diretório de trabalho
+WORKDIR /app
+
+# Comando para rodar o script Python
+CMD ["python", "app.py"]
